@@ -1,0 +1,44 @@
+{% extends 'Front/base.html.twig'%}
+{% block info %}
+{% endblock %}
+{% block navbar %}
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Log in</h6>
+                <h1>Good To See You Again</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form bg-white" style="padding: 30px;">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Your Email"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                             <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Your Password"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Log in</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

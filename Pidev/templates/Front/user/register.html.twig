@@ -1,0 +1,71 @@
+{% extends 'Front/base.html.twig'%}
+{% block info %}
+{% endblock %}
+{% block navbar %}
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Register</h6>
+                <h1>Create Your Account</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form bg-white" style="padding: 30px;">
+                        
+                        <div id="success"></div>
+                        <div name="sentMessage"  novalidate="novalidate">
+                            
+                                {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+
+                                <div class="control-group ">
+                                    <input name="{{ field_name(form.name) }}" value="{{ field_value(form.name) }}" type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" />
+                                        
+                                        <p class="help-block text-danger"> {{ form_errors(form.name) }}</p>
+                                </div>
+                                <div class="control-group ">
+                                    <input name="{{ field_name(form.firstname) }}" value="{{ field_value(form.firstname) }}"type="text" class="form-control p-4" id="email" placeholder="Your First Name"
+                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger">{{ form_errors(form.firstname) }}</p>
+                                </div>
+                            
+                            <div class="control-group">
+                                <input name="{{ field_name(form.mail) }}" value="{{ field_value(form.mail) }}" type="text" class="form-control p-4" id="subject" placeholder="Your Mail"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger">{{ form_errors(form.mail) }}</p>
+                            </div>
+                             <div class="control-group">
+                                <input name="{{ field_name(form.password) }}" value="{{ field_value(form.password) }}" type="text" class="form-control p-4" id="subject" placeholder="Your Password"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger">{{ form_errors(form.password) }}</p>
+                            </div>
+                            <div class="control-group">
+                             <div class="control-group">
+                                <input name="{{ field_name(form.adress) }}" value="{{ field_value(form.adress) }}" type="text" class="form-control p-4" id="subject" placeholder="Your Address"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger">{{ form_errors(form.adress) }}</p>
+                            </div>
+                            
+                             <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <div class="text-center">
+                                <button name="{{ field_name(form.submit) }}" value="{{ field_value(form.submit) }}" class="btn btn-primary py-3 px-4" type="submit" >Submit</button>
+                            </div>
+                              {{ form_end(form) }} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

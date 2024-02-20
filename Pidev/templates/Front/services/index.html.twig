@@ -1,0 +1,38 @@
+{% extends 'Front/base.html.twig'%}
+{% block navbar %} 
+ <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">CULTU</span>VOYAGE</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="{{ path('app_home')}}" class="nav-item nav-link ">Home</a>
+                        <a href="{{ path('app_reservation') }}" class="nav-item nav-link">Reservation</a>
+                        <a href="{{ path('app_flight')}}" class="nav-item nav-link">Vol</a>
+                        <a href="{{ path('app_services')}}" class="nav-item nav-link active">Activite</a>
+                        
+                        <a href="{{ path('app_register')}}" class="nav-item nav-link">Sign in</a>
+                        <a href="" class="nav-item nav-link">log in</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+     <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-uppercase">Contact</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Contact</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 
